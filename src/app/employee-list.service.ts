@@ -6,8 +6,11 @@ import { HttpClient } from "@angular/common/http";
 })
 export class EmployeeListService {
 
+  private _url: string = "/assets/data/employees.json";
+  
   constructor(private http: HttpClient) { }
 
   getEmployees(){
+    return this.http.get(this._url)
   }
 }
