@@ -10,10 +10,9 @@ export class EmployeeNameComponent implements OnInit {
 
   public employees = [];
 
-  constructor(private _employeelistService: EmployeeListService) { }
-
-  ngOnInit() {
-    this.employees = this._employeelistService.getEmployees()
-  }
-
+  constructor(private _employeelistingService: EmployeeListService) { }
+  
+    ngOnInit() {
+      this._employeelistingService.getEmployees().subscribe(data => this.employees = data)
+    }
 }

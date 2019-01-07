@@ -6,7 +6,7 @@ import { EngineComponent } from './engine/engine.component';
 import { EmployeeNameComponent } from './employee-name/employee-name.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { EmployeeListService } from "src/app/employee-list.service";
-import { HttpClient} from "@angular/common/http";
+import { HttpClientModule } from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -16,8 +16,8 @@ import { HttpClient} from "@angular/common/http";
     EmployeeDetailsComponent
   ],
   imports: [
-    BrowserModule
-    HttpClient
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [EmployeeListService],
   bootstrap: [AppComponent]
